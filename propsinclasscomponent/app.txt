@@ -1,0 +1,14 @@
+import React from "react";
+import ClassProps from './ClassProps';
+
+class App extends React.Component{
+  render(){
+    return(
+    <ClassProps/>
+    )
+  }
+}
+
+
+
+export default App;

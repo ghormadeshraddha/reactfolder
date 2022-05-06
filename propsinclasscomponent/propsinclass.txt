@@ -1,0 +1,19 @@
+import React from "react"; 
+import Props2 from "./Props2";
+
+class ClassProps extends React.Component{
+    render(){
+        return(
+            <>
+             <h1>!!HELLO WORLD!!</h1>
+             <Props2  name='Shraddha' Email='test@gmail.com' city='Nagpur'/><br></br>
+             <Props2  name='Komal' Email='gem@gmail.com' city='Pune'/><br></br>
+             <Props2  name='Dik' Email='peter@gmail.com' city='amravti'/><br></br>
+
+             {/* <button onClick={() => (setName('ghormade'))}>Click Me</button> */}
+            </>
+        )
+    }
+}
+
+export default ClassProps;

@@ -1,0 +1,32 @@
+import React from "react";
+import ChildProps from "./ChildProps";
+
+class MethodasProps extends React.Component{
+
+    constructor(){
+        super();
+        this.state={
+            name:"Shraddha"
+
+        }
+    }
+       
+    ParentComp = () =>{
+        this.setState(
+            {
+               name:"Ghormade" 
+            }
+        )
+    }
+
+    render(){
+        return(
+            <>
+               <h1>{this.state.name}</h1>
+               <ChildProps  method={this.ParentComp}/>
+            </>
+        )
+    }
+}
+
+export default MethodasProps;

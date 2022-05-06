@@ -1,0 +1,76 @@
+import React from "react"; 
+
+class Formhandler extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            username:"",
+            feedback:"",
+            subject:""
+        }
+    }
+    
+    changeUsername = event =>{
+        this.setState({
+            username:event.target.value
+        })
+    }
+
+
+    feebackChange = event =>{
+        this.setState({
+            feedback:event.target.value
+        })
+    }
+
+
+    handleSubmit = event =>{
+        alert(`${this.state.username} ${this.state.feedback}`)
+        event.preventDefault()
+    }
+
+
+    render(){
+        return(
+            <>
+                <h1>Form Handler in ReactJs</h1>
+                <form>
+                <div>
+                    <label>Username:</label>
+                    <input type="text"
+                     value={this.state.username}  
+                     onChange={this.changeUsername}/>
+                    </div>
+                    <br></br> <br></br>
+
+                <div>
+                    <label>Feedback:</label>
+                    <textarea type="text" 
+                    value={this.state.feedback}
+                    onChange={this.feebackChange}>
+                     </textarea>
+                </div> 
+                <br></br> <br></br>   
+
+
+                <div>
+                <label>Select Subject:</label>
+                <select>
+                <option value="React">React</option>
+                <option value="Js">Js</option>
+                <option value="HTMl">HTML</option>
+                <option value="CSS">CSS</option>
+                </select>
+                </div> 
+                <br></br>       
+
+              <button onClick={this.handleSubmit}>Submit</button>
+                  
+                </form>
+                </>
+           
+        )
+    }
+
+}
+export default Formhandler;

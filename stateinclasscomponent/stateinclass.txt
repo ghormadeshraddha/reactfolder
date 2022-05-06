@@ -1,0 +1,28 @@
+import React from "react";
+
+class StateinClass extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            message: 'Hello'
+        }
+    }
+
+    changeEvent() {
+        this.setState ({
+            message: "Thank you  for register"
+        
+        })
+    }
+
+    render() {
+        return (
+            <>
+                <h1>{this.state.message}</h1>
+                <button onClick={() => this.changeEvent()}>Submit</button>
+            </>
+        )
+    }
+}
+
+export default StateinClass;

@@ -1,0 +1,50 @@
+
+import React from "react";  
+ 
+
+class ListRendering extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            list:[
+            {
+            Id:1,
+            Name:"Peter",
+            course:"React",
+            Email:'test@get.com'
+            },
+            {
+                Id:2,
+                Name:"John",
+                course:"Java",
+                Email:'test@get.com'
+            },
+            {
+                Id:3,
+                Name:"Bruce",
+                course:"Js",
+                Email:'bruce@get.com'
+            }
+            ]
+        }
+    }
+
+
+    render(){
+        return(
+            <>
+                <h1>List Rendering</h1>
+                    {this.state.list.map((item) =>
+                        <>
+                        <h1>Id:{item.Id} </h1>
+                        <h1>Name: {item.Name}</h1>
+                        <h1>Course: {item.course}</h1>
+                        <h1>Email:{item.Email}</h1>
+                       </>
+                    )
+                    }
+            </>
+        )
+    }
+}
+export default ListRendering;

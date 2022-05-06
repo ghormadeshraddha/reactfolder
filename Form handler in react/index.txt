@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Formhandler from "./Formhandler";
+
+ReactDOM.render(
+  <Formhandler/>,
+  document.getElementById("root")
+);
+

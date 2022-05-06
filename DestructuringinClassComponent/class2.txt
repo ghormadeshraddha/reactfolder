@@ -1,0 +1,12 @@
+import React from "react"; 
+ class ClassStruct extends React.Component{
+     render(){
+         const {name,city}=this.props
+         return(
+             <>
+                 <h1>My name is  {name} , I am From {city}</h1>
+             </>
+         )
+     }
+ }
+ export default ClassStruct;

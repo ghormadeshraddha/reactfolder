@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Destructure from "./Destructure";
+
+ReactDOM.render(
+  <Destructure/>,
+  document.getElementById("root")
+);
+

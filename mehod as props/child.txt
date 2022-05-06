@@ -1,0 +1,18 @@
+import React from "react";
+
+class ChildProps extends React.Component{
+    constructor(props){
+        super(props);
+
+    }
+    render(){
+        return(
+            <>
+              {/* <h1>{this.state.name}</h1> */}
+              <button onClick={this.props.method}> Click Me</button>
+            </>
+        )
+    }
+}
+
+export default ChildProps;

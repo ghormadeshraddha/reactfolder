@@ -1,0 +1,50 @@
+import React from "react";
+
+class ConditionalRendering extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            userlogin:true
+        }
+    }
+
+    render()
+    { 
+        
+          return this.state.userlogin && <div>welcome user</div>            //short circuit method this will show only true conndition
+
+        let message                           //using element variable
+        if(this.state.userlogin){
+            message = <h1>welcome user</h1>
+        }
+        else{
+        message =<h1>page not found</h1>  
+        } 
+
+
+         return(                                   //using ternary operator
+        this.state.userlogin ? 
+        <h1>welcome</h1> :
+         <h1>goodbye</h1>
+         )
+
+        
+                                                      // using if-else statement
+        if(this.state.userlogin){
+            return<h1>user successfully login</h1>
+        }
+        else{
+           return <h1> login Unsuccesful</h1>
+        }
+        
+        
+        return(
+            <>
+             <h1>Conditional Rendering</h1>
+             {/* <h2>{message}</h2> */}
+            </>
+        )
+        
+    }
+}
+export default ConditionalRendering;

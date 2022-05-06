@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StateinClass from "./StateinClass";
+
+ReactDOM.render(
+  <StateinClass/>,
+  document.getElementById("root")
+);
+

@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Listrenderingusingfunc from "./Listrenderingusingfunc";
+
+ReactDOM.render(
+  <Listrenderingusingfunc/>,
+  document.getElementById("root")
+);
+

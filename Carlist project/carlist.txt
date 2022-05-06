@@ -1,0 +1,64 @@
+import React from "react";
+
+class CityListProject extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            City: "",
+            newcity: []
+        }
+    }
+
+    Changecity = event => {
+        this.setState({
+            City: event.target.value
+        })
+    }
+
+    AddNewCity = () => {
+        let cityName = this.state.newcity
+        cityName.push([this.state.City])
+        this.setState({
+            newcity: cityName,
+            City: ""
+        })
+    }
+    
+    deleteItem = (deleteItemlist) => {
+        console.log(this.state.newcity);
+
+        let arr = this.state.newcity;
+        arr.splice(deleteItemlist, 1)
+
+        this.setState({
+            newcity: arr
+        });
+    }
+
+
+
+    render() {
+        return (
+            <>
+                <h1>Display City Name</h1>
+
+                <input type="text"
+                    placeholder="add city"
+                    value={this.state.City}
+                    onChange={this.Changecity} />
+
+                <button onClick={this.AddNewCity}>Add</button>
+
+                <ol>
+
+                    {
+
+                        this.state.newcity.map((item, index) =>
+                            <li key={item}> {item} <button onClick={() => { this.deleteItem(index) }}>X</button> </li>
+                        )
+                    }
+                </ol>
+            </>
+        )
+    }
+} export default CityListProject;

@@ -1,0 +1,18 @@
+import React from "react";
+import ClassStruct from "./ClassStruct";
+
+class Destructure extends React.Component{
+    constructor(){
+        super();
+
+    }
+    render(){
+        return(
+            <>
+                <h1>Hello</h1>
+                <ClassStruct name='Shraddha' city='Nagpur'/>
+            </>
+        )
+    }
+}
+export default Destructure;

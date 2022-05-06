@@ -1,0 +1,24 @@
+import React from "react"; 
+import List2 from "./List2";
+
+function Listrenderingusingfunc() {
+    const List =[
+        {id:1 , Name:"Shraddha", city:"Pune"},
+        {id:2 , Name:"Komal" , city:"Nagpur"},
+        {id:3,Name:"Peter" ,city:"katol"}
+    ]
+
+
+    const MultipleList= List.map (item => <List2  item ={item}/>)
+
+    return(
+        <>
+            <h1>List Rendering in Functional Component</h1>
+            <h1>{MultipleList}</h1>
+            </>
+            
+    )
+
+    
+}
+export default Listrenderingusingfunc;

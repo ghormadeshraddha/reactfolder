@@ -1,0 +1,11 @@
+import React from "react";
+
+function List2 ({item}){
+    return(
+        <>
+            <h2> I am {item.Name}. My Id is {item.id}.I am From {item.city}</h2>
+        </>
+    )
+}
+
+export default List2;

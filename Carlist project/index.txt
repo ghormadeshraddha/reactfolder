@@ -1,0 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CityListProject from "./CityListProject";
+
+ReactDOM.render(
+  <CityListProject/>,
+  document.getElementById("root")
+);
+

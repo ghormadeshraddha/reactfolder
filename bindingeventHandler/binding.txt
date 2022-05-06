@@ -1,0 +1,40 @@
+import React from "react";
+
+class EventBind extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            message: 'Hello 🖐️'
+        }
+        // this.clickHandler=this.clickHandler.bind(this);
+
+    }
+
+    // clickHandler(){
+    //     console.log(this)
+    //     this.setState({
+    //         message:'Goodbye!! 👋'
+    //     })
+    // }
+
+    clickHandler = () => {
+        this.setState({
+            message: "GoodBye!!"
+        })
+
+    }
+
+    render() {
+        return (
+            <>
+                <h1>{this.state.message}</h1>
+                {/* <button onClick={this.clickHandler.bind(this)}>click me</button> */}
+                {/* <button onClick={() => this.clickHandler()}>click me</button> */}
+                <button onClick={this.clickHandler}>click me</button>
+            </>
+        )
+    }
+}
+
+
+export default EventBind;
